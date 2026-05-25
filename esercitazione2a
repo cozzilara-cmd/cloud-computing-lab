@@ -1,0 +1,28 @@
+mkdir il-mio-lab
+cd il-mio-lab
+git init
+mkdir .devcontainer
+cat > .devcontainer/devcontainer.json << 'EOF'
+{
+  "name": "Il mio Lab",
+  "image": "mcr.microsoft.com/devcontainers/base:debian"
+}
+EOF
+  "name": "Il mio Lab",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "24" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { "moby": false }
+  }
+  "name": "Il mio Lab",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "24" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { "moby": false }
+  }
+  "postCreateCommand": "docker --version && node --version",
+  "forwardPorts": [3000, 8080, 8888]
+}
+git add .devcontainer/devcontainer.json
+git commit -m "feat: add devcontainer configuration"
