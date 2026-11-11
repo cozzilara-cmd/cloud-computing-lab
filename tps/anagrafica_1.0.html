@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Anagrafica</h1>
+
+    <p>
+
+    nome: <input type="text" id="nome">
+    <br><br>
+    cognome: <input type="text" id="cognome">
+    <br><br>
+    eta': <input type="number" id="eta">
+    <br><br>
+    sesso:
+    <br>
+    <input type="radio" name="sesso" value="M"> M
+    <br>
+    <input type="radio" name="sesso" value="F"> F
+    <br>
+    <input type="radio" name="sesso" value="altro"> altro
+    <br><br>
+    indirizzo: <input type="text" id="citta'">
+    <br><br>
+    Provincia:
+    <select id="prov">
+    <option value="">Select</option>
+    <option value="Milano">Milano</option>
+    <option value="Firenze">Firenze</option>
+    </select>
+    <br><br>
+    Sport:
+    <br>
+    <input type="checkbox" name="sport" value="Pallavolo">
+    <label>Pallavolo</label>
+    <br>
+    <input type="checkbox" name="sport" value="Pallamano">
+    <label>Pallamano</label>
+    <br>
+    <input type="checkbox" name="sport" value="baseball">
+    <label>baseball</label>
+    <br>
+    <input type="checkbox" name="sport" value="altro">
+    <label>altro</label>
+    <br>
+    <input type="checkbox" name="sport" value="nessuno sport">
+    <label>nessuno sport</label>
+    <br><br>
+    commenti: 
+    <br>
+    <textarea id="commenti" rows="4" cols="50" placeholder="Inserisci i commenti qui"></textarea>
+    </p>
+
+     <button type="button" onclick="stampaDati()">Inserisci dati</button>
+    <br><br>
+    <table border="1" id="tabella" style="display: none;">
+    <thead>
+    <tr>
+    <th>Nome</th>
+    <th>Cognome</th>
+    <th>Eta'</th>
+    <th>Sesso</th>
+    <th>Indirizzo</th>
+    <th>Città</th>
+    <th>Provincia</th>
+    <th>Sport</th>
+    <th>Commenti</th>
+    </tr>
+    </thead>
+    <tbody id="risultato">
+    </table>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
